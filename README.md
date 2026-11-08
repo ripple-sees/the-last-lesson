@@ -239,10 +239,7 @@ function updateStaminaUI(){
    $('runBtn').classList.remove('exhausted');
   }else{
    sBar.style.backgroundColor='#4caf50';
-   $('runBtn').classList.remove('exhausted');
-  }
- }
-}
+   $('runBtn').addEventListener('mousedown',()=>{if(!isExhausted)running=true;});
 
 function update(dt){
  if(!started||paused||won||dead)return;
